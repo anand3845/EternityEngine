@@ -8,6 +8,7 @@ import renderEngine.DisplayManager;
 import renderEngine.Loader;
 import renderEngine.RawModel;
 import renderEngine.Renderer;
+import shaders.StaticShader;
 
 public class MainGameLoop {
 
@@ -17,6 +18,7 @@ public class MainGameLoop {
 		
 		Loader loader = new Loader();
 		Renderer renderer = new Renderer();
+		StaticShader shader = new StaticShader();
 		
 		//OpenGL Counter clockwise vertices
 		
@@ -41,8 +43,9 @@ public class MainGameLoop {
 			renderer.prepare();
 			//game logic
 			//render
+			shader.start();
 			renderer.render(model);
-			
+			 shader.stop();
 			DisplayManager.UpdateDisplay();
 		}
 		

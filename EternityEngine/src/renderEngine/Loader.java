@@ -28,7 +28,7 @@ public class Loader {
 		int vaoID = createVAO();
 		bindIndicesBuffer(indices);
 		storeDataInAttributeList(0, 3, positions);
-		storeDataInAttributeList(1, 2, positions);
+		storeDataInAttributeList(1, 2, textureCoords);
 		unbindVAO();
 		return new RawModel(vaoID, indices.length);
 	}
@@ -37,13 +37,11 @@ public class Loader {
 		Texture texture = null;
 		try {
 			texture = TextureLoader.getTexture("PNG", new FileInputStream("res/texture/" + filename + ".png"));
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+			System.err.println("Failed to load texture " + filename + ".png");
+			System.exit(-1);
+		} 
 		int textureID = texture.getTextureID();
 		textures.add(textureID);
 		return textureID;

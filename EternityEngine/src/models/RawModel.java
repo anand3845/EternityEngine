@@ -14,11 +14,9 @@ public class RawModel {
 		return vaoID;
 	}
 
-
 	public int getVertexCount() {
 		return vertexCount;
 	}
-
 	
 	
 

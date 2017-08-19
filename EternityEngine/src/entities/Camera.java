@@ -21,7 +21,7 @@ public class Camera {
         pitch += -(arg_roll/10) ;
         Mouse.setGrabbed(true);
         
-	                if (Keyboard.isKeyDown(Keyboard.KEY_W)) 
+	                if (Keyboard.isKeyDown(Keyboard.KEY_Y)) 
             {
                 float toZ = ((float)Math.sin( Math.toRadians(yaw+90))) ;
                 float toX = ((float)Math.cos( Math.toRadians(yaw+90))) ;
@@ -29,7 +29,7 @@ public class Camera {
                 position.z -= toZ;
                     
 	                }
-            if (Keyboard.isKeyDown(Keyboard.KEY_S)) 
+            if (Keyboard.isKeyDown(Keyboard.KEY_H)) 
             {
                 float toZ = ((float)Math.sin( Math.toRadians(yaw+90))) ;
                 float toX = ((float)Math.cos( Math.toRadians(yaw+90))) ;
@@ -37,7 +37,7 @@ public class Camera {
                 position.z += toZ;
 	                }
 
-	                if (Keyboard.isKeyDown(Keyboard.KEY_D)) 
+	                if (Keyboard.isKeyDown(Keyboard.KEY_J)) 
             {
                 float toZ = ((float)Math.sin( Math.toRadians(yaw))) ;
                 float toX = ((float)Math.cos( Math.toRadians(yaw))) ;
@@ -45,7 +45,7 @@ public class Camera {
                 position.z += toZ;
 	                }
 
-	                if (Keyboard.isKeyDown(Keyboard.KEY_A)) 
+	                if (Keyboard.isKeyDown(Keyboard.KEY_G)) 
             {
                 float toZ = ((float)Math.sin( Math.toRadians(yaw))) ;
                 float toX = ((float)Math.cos( Math.toRadians(yaw))) ;

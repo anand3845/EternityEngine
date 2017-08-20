@@ -1,22 +1,22 @@
 package entities;
 
-
+import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
 import org.lwjgl.util.vector.Vector3f;
 
-public class Camera {
+public class ThirdPersonCamera {
 	
-	private float distanceFromPlayer = 150;
+	private float distanceFromPlayer = 50;
 	private float angleAroundPlayer = 0;
 	
-	private Vector3f position = new Vector3f(0, -100, 0);
+	private Vector3f position = new Vector3f(0,5,0);
 	private float pitch = 10;
 	private float yaw ;
 	private float roll;
 	
 	private Player player;
 		
-	public Camera(Player player){
+	public ThirdPersonCamera(Player player){
 		this.player = player;
 	}
 	
@@ -30,8 +30,6 @@ public class Camera {
 		float verticalDistance = calculateVerticalDistance();
 		
 		calculateCameraPosition(horizontalDistance, verticalDistance);
-		
-		this.yaw = 180 - (player.getRotY() - angleAroundPlayer);
 		
 	}
 	

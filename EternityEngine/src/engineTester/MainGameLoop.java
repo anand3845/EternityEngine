@@ -19,7 +19,7 @@ import terrains.Terrain;
 import textures.ModelTexture;
 import textures.TerrainTexture;
 import textures.TerrainTexturePack;
-import entities.Camera;
+import entities.ThirdPersonCamera;
 import entities.Entity;
 import entities.Light;
 import entities.Player;
@@ -92,7 +92,8 @@ public class MainGameLoop {
 		
 		Player player = new Player(playerModel, new Vector3f(0, -50, 0), 0, 0, 0, 1);
 		
-		Camera camera = new Camera(player);
+	
+		ThirdPersonCamera camera = new ThirdPersonCamera(player);
 		
 		while(!Display.isCloseRequested()){
 			camera.move();

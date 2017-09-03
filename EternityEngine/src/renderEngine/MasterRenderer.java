@@ -14,7 +14,7 @@ import org.lwjgl.util.vector.Matrix4f;
 import shaders.StaticShader;
 import shaders.TerrainShader;
 import terrains.Terrain;
-import entities.Camera;
+import entities.ThirdPersonCamera;
 import entities.Entity;
 import entities.Light;
 
@@ -57,7 +57,7 @@ public class MasterRenderer {
 		GL11.glDisable(GL11.GL_CULL_FACE);
 	}
 	
-	public void render(Light sun,Camera camera){
+	public void render(Light sun,ThirdPersonCamera camera){
 		prepare();
 		shader.start();
 		shader.loadskyColour(RED, GREEN, BLUE);
